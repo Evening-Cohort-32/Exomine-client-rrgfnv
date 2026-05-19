@@ -1,0 +1,38 @@
+erDiagram
+    COLONY ||--o{ GOVERNOR : "is ruled by"
+    COLONY ||--o{ COLONY_MINERAL : "owns inventory"
+    MINERAL ||--o{ COLONY_MINERAL : "is stockpiled as"
+    MINERAL ||--o{ FACILITY_MINERAL : "is mined as"
+    FACILITY ||--o{ FACILITY_MINERAL : "holds inventory"
+    
+    COLONY {
+        int id PK
+        string name
+    }
+    GOVERNOR {
+        int id PK
+        string name
+        boolean active
+        int colonyId FK
+    }
+    FACILITY {
+        int id PK
+        string name
+        boolean active
+    }
+    MINERAL {
+        int id PK
+        string name
+    }
+    FACILITY_MINERAL {
+        int id PK
+        int facilityId FK
+        int mineralId FK
+        int tons
+    }
+    COLONY_MINERAL {
+        int id PK
+        int colonyId FK
+        int mineralId FK
+        int tons
+    }
