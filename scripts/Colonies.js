@@ -26,7 +26,7 @@ export const Colonies = async () => {
         mineralsHTML += `<ul>\n`
         
         //Map over purchase to creat the ilst items
-        const listItems = colonoyPurchases.map(purchase => {
+        const listItems = colonyPurchases.map(purchase => {
             return `<li>${purchase.tons} tons of ${purchase.mineral.name}</li>`
         })
   

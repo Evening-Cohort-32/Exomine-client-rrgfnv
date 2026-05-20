@@ -1,10 +1,13 @@
 import { Governors } from "./governors.js";
 import { Colonies } from "./colonies.js";
+import { facilityOptions } from "./facilitiesChoice.js";
 
 const renderAllHTML = async () => {
     const governorHTML = await Governors()
     const coloniesHTML = await Colonies()
-
+    const facilitiesHTML = await facilityOptions()
+    
+    document.querySelector("#facilityOptions").innerHTML = facilitiesHTML
     document.querySelector("#governorSelect").innerHTML = governorHTML
     document.querySelector("#colonyMinerals").innerHTML = coloniesHTML
 }
