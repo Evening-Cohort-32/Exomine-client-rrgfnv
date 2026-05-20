@@ -11,7 +11,6 @@ const renderAllHTML = async () => {
 
 renderAllHTML()
 
-
 // Governor Selection Event Listener
 document.addEventListener("stateChanged", (event) => {
     renderAllHTML()
