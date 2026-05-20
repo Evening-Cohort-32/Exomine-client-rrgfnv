@@ -6,11 +6,11 @@ const handleFacilitiesChoice = (event) => {
     }
 }
 
+document.addEventListener("change", handleFacilitiesChoice)
+
 export const facilityOptions = async () => {
     const response = await fetch("http://localhost:8088/facilities")
     const facilities = await response.json()
-
-    document.addEventListener("change", handleFacilitiesChoice)
 
     let html = `
         <div class="facility-input">
