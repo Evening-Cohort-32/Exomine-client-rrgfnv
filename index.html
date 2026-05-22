@@ -6,14 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css" />
     <title>Exomine</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <section id="governorSelect"></section>
+    <header>
+        <h1>Solar System Mining Marketplace</h1>
+    </header>
 
-    <section id="facilityOptions"></section>
+    <main>
+        <!-- Top Section: Dropdowns on left, Colony Minerals on right -->
+        <section class="top-section">
+            <div class="dropdowns">
+                <article id="governorSelect"></article>
+                <article id="facilityOptions"></article>
+            </div>
+            
+            <article id="colonyMinerals" class="colony-minerals"></article>
+        </section>
 
-    <section id="colonyMinerals"></section>
+        <!-- Bottom Section: Facility Minerals on left, Space Cart on right -->
+        <section class="bottom-section">
+            <article id="facilityMinerals" class="facility-minerals">
+                <h2>Facility Minerals</h2>
+            </article>
 
-    <script type="module" src="scripts/main.js"></script>
+            <article id="spaceCart" class="space-cart">
+                <h2>Space Cart</h2>
+                <button id="purchaseBtn" class="purchase-btn">Purchase Mineral</button>
+            </article>
+        </section>
+    </main>
+
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

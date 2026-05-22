@@ -21,6 +21,11 @@ export const mineralOptions = async (selectedFacilityId) => {
         facilityMineral => facilityMineral.facility_id === selectedFacilityId
     )
 
+    console.log("Selected Facility ID:", selectedFacilityId)
+    console.log("Facility Minerals:", facilityMinerals)
+    console.log("Minerals:", minerals)
+    console.log("Matching Facility Minerals:", matchingFacilityMinerals)
+
         let html = `
             <div class="facility-minerals">
                 <h3> Facility Minerals </h3>

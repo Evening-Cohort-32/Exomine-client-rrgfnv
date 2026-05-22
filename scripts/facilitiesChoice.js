@@ -1,10 +1,10 @@
-import { setFacility } from "./TransientState.js"
+import { setFacility } from "./TransientState.js";
 
 const handleFacilitiesChoice = (event) => {
     // event clicker for picking a facility
     if (event.target.name === "facility") {
-        const pickFacility = parseInt(event.target.value)
-        setFacility(pickFacility)
+        setFacility(parseInt(event.target.value))
+        console.log("Selected facility ID:", event.target.value);
     }
 }
 

@@ -1,6 +1,6 @@
 const state = {
     governorId: 0,
-    selectedFacility: 0
+    facilityId: 0
 }
 
 export const getGovernorChoice = () => {
@@ -12,9 +12,13 @@ export const setGovernor = (governorId) => {
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
-export const setFacility = (facilityId) => {
-    state.selectedFacility = facilityId
+export const setFacility = (chosenFacility) => {
+    state.facilityId = chosenFacility
     document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+
+export const getTransientState = () => {
+    return state
 }
 
 export const purchaseMineral = () => {
