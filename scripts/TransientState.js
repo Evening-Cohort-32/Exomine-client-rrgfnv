@@ -1,5 +1,15 @@
 const state = {
+    governorId: 0,
+    selectedFacility: 0
+}
 
+export const getGovernorChoice = () => {
+    return state.governorId
+}
+
+export const setGovernor = (governorId) => {
+    state.governorId = governorId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
 export const setFacility = (facilityId) => {
