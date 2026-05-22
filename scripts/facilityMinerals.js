@@ -1,7 +1,4 @@
-import { facilityOptions } from "./facilitiesChoice";
-
 const handleMineralChoice = (event) => {
-    // Make sure you change this condition if you named your inputs differently
     if (event.target.name === "minerals") {
         setMineralOption(parseInt(event.target.value))
         console.log("Selected mineral ID:", event.target.value);
