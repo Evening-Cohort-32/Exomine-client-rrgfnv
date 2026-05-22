@@ -1,15 +1,17 @@
+import { setFacility } from "./TransientState.js"
+
 const handleFacilitiesChoice = (event) => {
     // event clicker for picking a facility
     if (event.target.name === "facility") {
-        setFacilityOption(parseInt(event.target.value))
-        console.log("Selected facility ID:", event.target.value);
+        const pickFacility = parseInt(event.target.value)
+        setFacility(pickFacility)
     }
 }
 
 document.addEventListener("change", handleFacilitiesChoice)
 
 export const facilityOptions = async () => {
-    const response = await fetch("http://localhost:8088/facilities")
+    const response = await fetch("http://localhost:8088/miningFacilities")
     const facilities = await response.json()
 
     let html = `
