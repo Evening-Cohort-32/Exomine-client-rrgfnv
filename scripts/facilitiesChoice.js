@@ -24,7 +24,7 @@ export const facilityOptions = async () => {
             return `
                 <option 
                     value="${facility.id}"
-                    $facility.active ? "" : "disabled"}> 
+                    ${facility.active ? "" : "disabled"}> 
                     ${facility.name}
                     ${facility.active ? "" : "(Inactive)"}
                 </option>
