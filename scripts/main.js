@@ -1,9 +1,9 @@
-import { GovernorsSelect } from "./Governors.js";
+import { GovernorSelect } from "./Governors.js";
 import { Colonies } from "./Colonies.js";
 import { facilityOptions } from "./facilitiesChoice.js";
 
 const renderAllHTML = async () => {
-    const governorHTML = await GovernorsSelect()
+    const governorHTML = await GovernorSelect()
     const coloniesHTML = await Colonies()
     const facilitiesHTML = await facilityOptions()
 
