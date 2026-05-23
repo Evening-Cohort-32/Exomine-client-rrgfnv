@@ -4,55 +4,55 @@
             "id": 1,
             "name": "Amina Solari",
             "active": true,
-            "colony_id": 1
+            "colonyId": 1
         },
         {
             "id": 2,
             "name": "Victor Hale",
             "active": true,
-            "colony_id": 1
+            "colonyId": 1
         },
         {
             "id": 3,
             "name": "Leona Kestrel",
             "active": false,
-            "colony_id": 1
+            "colonyId": 1
         },
         {
             "id": 4,
             "name": "Raj Ortez",
             "active": true,
-            "colony_id": 2
+            "colonyId": 2
         },
         {
             "id": 5,
             "name": "Helena Voss",
             "active": false,
-            "colony_id": 2
+            "colonyId": 2
         },
         {
             "id": 6,
             "name": "Kai Mendoza",
             "active": true,
-            "colony_id": 3
+            "colonyId": 3
         },
         {
             "id": 7,
             "name": "Soren Malik",
             "active": true,
-            "colony_id": 4
+            "colonyId": 4
         },
         {
             "id": 8,
             "name": "Nadia Winters",
             "active": true,
-            "colony_id": 5
+            "colonyId": 5
         },
         {
             "id": 9,
             "name": "Tariq Bellamy",
             "active": false,
-            "colony_id": 5
+            "colonyId": 5
         }
     ],
     "colonies": [
@@ -138,136 +138,136 @@
     "purchases": [
         {
             "id": 1,
-            "colony_id": 1,
-            "mineral_id": 1,
+            "colonyId": 1,
+            "mineralId": 1,
             "tons": 0
         },
         {
             "id": 2,
-            "colony_id": 1,
-            "mineral_id": 4,
+            "colonyId": 1,
+            "mineralId": 4,
             "tons": 300
         },
         {
             "id": 3,
-            "colony_id": 2,
-            "mineral_id": 3,
+            "colonyId": 2,
+            "mineralId": 3,
             "tons": 0
         },
         {
             "id": 4,
-            "colony_id": 2,
-            "mineral_id": 5,
+            "colonyId": 2,
+            "mineralId": 5,
             "tons": 0
         },
         {
             "id": 5,
-            "colony_id": 3,
-            "mineral_id": 2,
+            "colonyId": 3,
+            "mineralId": 2,
             "tons": 0
         },
         {
             "id": 6,
-            "colony_id": 3,
-            "mineral_id": 4,
+            "colonyId": 3,
+            "mineralId": 4,
             "tons": 0
         },
         {
             "id": 7,
-            "colony_id": 4,
-            "mineral_id": 6,
+            "colonyId": 4,
+            "mineralId": 6,
             "tons": 510
         },
         {
             "id": 8,
-            "colony_id": 5,
-            "mineral_id": 1,
+            "colonyId": 5,
+            "mineralId": 1,
             "tons": 0
         },
         {
             "id": 9,
-            "colony_id": 5,
-            "mineral_id": 5,
+            "colonyId": 5,
+            "mineralId": 5,
             "tons": 0
         },
         {
             "id": 10,
-            "colony_id": 4,
-            "mineral_id": 3,
+            "colonyId": 4,
+            "mineralId": 3,
             "tons": 0
         }
     ],
     "facilityMinerals": [
         {
             "id": 1,
-            "facility_id": 1,
-            "mineral_id": 1,
+            "facilityId": 1,
+            "mineralId": 1,
             "tons": 1200
         },
         {
             "id": 2,
-            "facility_id": 1,
-            "mineral_id": 3,
+            "facilityId": 1,
+            "mineralId": 3,
             "tons": 850
         },
         {
             "id": 3,
-            "facility_id": 1,
-            "mineral_id": 5,
+            "facilityId": 1,
+            "mineralId": 5,
             "tons": 600
         },
         {
             "id": 4,
-            "facility_id": 2,
-            "mineral_id": 2,
+            "facilityId": 2,
+            "mineralId": 2,
             "tons": 420
         },
         {
             "id": 5,
-            "facility_id": 2,
-            "mineral_id": 4,
+            "facilityId": 2,
+            "mineralId": 4,
             "tons": 275
         },
         {
             "id": 6,
-            "facility_id": 3,
-            "mineral_id": 6,
+            "facilityId": 3,
+            "mineralId": 6,
             "tons": 0
         },
         {
             "id": 7,
-            "facility_id": 4,
-            "mineral_id": 3,
+            "facilityId": 4,
+            "mineralId": 3,
             "tons": 150
         },
         {
             "id": 8,
-            "facility_id": 4,
-            "mineral_id": 6,
+            "facilityId": 4,
+            "mineralId": 6,
             "tons": 200
         },
         {
             "id": 9,
-            "facility_id": 5,
-            "mineral_id": 1,
+            "facilityId": 5,
+            "mineralId": 1,
             "tons": 780
         },
         {
             "id": 10,
-            "facility_id": 6,
-            "mineral_id": 2,
+            "facilityId": 6,
+            "mineralId": 2,
             "tons": 0
         },
         {
             "id": 11,
-            "facility_id": 6,
-            "mineral_id": 4,
+            "facilityId": 6,
+            "mineralId": 4,
             "tons": 2
         },
         {
             "id": 12,
-            "facility_id": 6,
-            "mineral_id": 5,
+            "facilityId": 6,
+            "mineralId": 5,
             "tons": 115
         }
     ]
