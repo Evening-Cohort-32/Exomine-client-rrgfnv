@@ -1,6 +1,8 @@
+import { setMineral } from "./TransientState.js";
+
 const handleMineralChoice = (event) => {
     if (event.target.name === "minerals") {
-        setMineralOption(parseInt(event.target.value))
+        setMineral(parseInt(event.target.value))
         console.log("Selected mineral ID:", event.target.value);
     }
 }
@@ -18,7 +20,7 @@ export const mineralOptions = async (selectedFacilityId) => {
 
     //filter minerals from chosen facility
     const matchingFacilityMinerals= facilityMinerals.filter(
-        facilityMineral => facilityMineral.facility_id === selectedFacilityId
+        facilityMineral => facilityMineral.facilityId === selectedFacilityId
     )
 
     console.log("Selected Facility ID:", selectedFacilityId)
@@ -36,12 +38,12 @@ export const mineralOptions = async (selectedFacilityId) => {
 
                 //find matching minerals from facility
                 const matchingMineral = minerals.find(
-                    mineral => mineral.id === facilityMineral.mineral_id
+                    mineral => mineral.id === facilityMineral.mineralId
                 )
 
                 return `
                     <label>
-                        <input type="radio" name="minerals" value="${matchingMineral.id}" /> ${matchingMineral.tons} tons of ${matchingMineral.name}
+                        <input type="radio" name="minerals" value="${matchingMineral.id}" /> ${facilityMineral.tons} tons of ${matchingMineral.name}
                     </label>
                 `
             }
