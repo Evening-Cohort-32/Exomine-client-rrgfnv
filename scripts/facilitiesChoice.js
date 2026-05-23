@@ -1,16 +1,31 @@
-import { setFacility } from "./TransientState.js";
+import { setFacility, getTransientState } from "./TransientState.js";
+import { mineralOptions } from "./facilityMinerals.js";
 
-const handleFacilitiesChoice = (event) => {
-    // event clicker for picking a facility
+const handleFacilitiesChoice = async (event) => {
+
     if (event.target.name === "facility") {
-        setFacility(parseInt(event.target.value))
-        console.log("Selected facility ID:", event.target.value);
+        const chosenFacility = parseInt(event.target.value)
+        setFacility(chosenFacility)
+        console.log("Selected facility ID:", chosenFacility)
+
+        const state = getTransientState()
+
+        const mineralsHTML = await mineralOptions(state.facilityId)
+
+        document.querySelector("#facilityMinerals").innerHTML = mineralsHTML
     }
 }
 
+
+
 document.addEventListener("change", handleFacilitiesChoice)
 
+
+
 export const facilityOptions = async () => {
+
+    const transientState = getTransientState()
+
     const response = await fetch("http://localhost:8088/miningFacilities")
     const facilities = await response.json()
 
@@ -21,25 +36,27 @@ export const facilityOptions = async () => {
             <select name="facility" id="facility-select">
                 <option value="">Select a facility</option>
     `
-    const facilitiesHTML = facilities.map(
-        (facility) => {
-            return `
-                <option 
-                    value="${facility.id}"
-                    ${facility.active ? "" : "disabled"}> 
-                    ${facility.name}
-                    ${facility.active ? "" : "(Inactive)"}
-                </option>
-            `
-        }
-    )
-    // Join the array of strings into a single string and add to our HTML
+
+    const facilitiesHTML = facilities.map((facility) => {
+
+        return `
+            <option 
+                value="${facility.id}"
+                ${facility.id === transientState.facilityId ? "selected" : ""}
+                ${facility.active ? "" : "disabled"}>
+                
+                ${facility.name}
+                ${facility.active ? "" : "(Inactive)"}
+            </option>
+        `
+    })
+
     html += facilitiesHTML.join("")
 
     html += `
             </select>
         </div>
     `
-    
+
     return html
 }
