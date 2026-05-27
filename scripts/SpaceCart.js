@@ -12,11 +12,11 @@ export const SpaceCart = async () => {
 
   if (state.mineralId !== 0 && state.facilityId !== 0) {
     const mineralsResponse = await fetch(
-      `http://localhost:3000/minerals/${state.mineralId}`,
+      `http://localhost:8088/minerals/${state.mineralId}`,
     )
     const mineral = await mineralsResponse.json()
     const facilityResponse = await fetch(
-      `http://localhost:3000/miningFacilities/${state.facilityId}`,
+      `http://localhost:8088/miningFacilities/${state.facilityId}`,
     )
     const facility = await facilityResponse.json()
 
